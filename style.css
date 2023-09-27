@@ -1,5 +1,29 @@
 @charset "UTF-8";
 
+@media screen and (max-width: 767px){
+    header div#menu{
+        display: block;
+    }
+    nav{
+        display: none;
+    }
+    ul{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    header div#menu{
+        display: block;
+    }
+    nav{
+        display: none;
+    }
+    ul{
+        flex-direction: column;
+    }
+}
+
 /* Configurações Gerais */
 @media all{
     *{
@@ -18,7 +42,7 @@
     /* Cabeçalho */
 
     header{
-        height: 100px;
+        height: auto;
         width: 100%;
         display: flex;
         align-items: center;
@@ -355,15 +379,4 @@
         font-size: 1.2em;
     }
 }
-@media screen and (max-width: 767px){
 
-}
-
-@media screen and (max-width: 1024){
-    div#menu{
-        display: block;
-    }
-    nav{
-        display: none;
-    }
-}

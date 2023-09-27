@@ -10,14 +10,14 @@
         <link rel="shortcut icon" href="logo-2be.png" type="image/x-icon">
         <title>2Be Consulting</title>
     </head>
-    <body>
+    <body onresize="mudouTamanho()">
         <header>
             <div id="logo">
                 <img src="logo-2be.png" alt="Logo da 2Be Consulting">
             </div>
             <div id="navbar">
-                <div id="menu"><ion-icon name="menu"></ion-icon></div>
-                <nav>
+                <div id="menu" onclick="clickMenu()"><ion-icon name="menu"></ion-icon></div>
+                <nav id="barra-navegacao">
                     <ul>
                         <li><a href="index.html" id="home">Início</a></li>
                         <li><a href="">Conheça</a></li>
@@ -174,5 +174,22 @@
             </div>
         </footer>
         <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+        <script>
+            let nav = window.document.getElementById("barra-navegacao")
+            function mudouTamanho(){
+                if(window.innerWidth >= 1024){
+                    nav.style.display = "block"
+                }else{
+                    nav.style.display = "none"
+                }
+            }
+            function clickMenu(){
+                if(nav.style.display == "block"){
+                    nav.style.display = "none"
+                }else{
+                    nav.style.display = "block"
+                }
+            }
+        </script>
     </body>
 </html>
