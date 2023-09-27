@@ -1,356 +1,369 @@
 @charset "UTF-8";
 
 /* Configurações Gerais */
+@media all{
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    body{
+        height: 100vh;
+        width: 100vw;
+        font-family: 'Roboto';
+        overflow-x: hidden;
+    }
+
+    /* Cabeçalho */
+
+    header{
+        height: 100px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 100px;
+        background-color: #ffffff;
+        border-bottom: 1px solid #009BDC;
+        box-shadow: 2px 2px 15px #00000060;
+        position: fixed;
+        z-index: 2;
+    }
+
+    header img{
+        width: 120px;
+    }
+
+    div#menu{
+        font-size: 2em;
+        color: #494c4f;
+        display: none;
+    }
+
+    div#menu:hover{
+        cursor: pointer;
+    }
+
+    ul{
+        display: flex;
+        gap: 30px;
+    }
+
+    li{
+        list-style: none;
+    }
+
+    header a#home{
+        color: #808080;
+    }
+
+    a{
+        text-decoration: none;
+        color: #009BDC;
+        font-weight: bold;
+    }
+
+    header a:hover{
+        color: #808080;
+    }
+
+    header a#home:hover{
+        color: #009BDC;
+    }
+
+    /* Conteúdo Principal */
+
+    main{
+        padding-top: 100px;
+    }
+
+    div#container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 100px 50px;
+        background-color: #F5F6F8;
+    }
+
+    div#container div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    div#processos{
+        flex-direction: column;
+        gap: 50px;
+        color: #54595f;
+    }
+
+    div#processos h2{
+        font-size: 55px;
+        font-weight: 100;
+    }
+
+    div#processos div{
+        width: 70px;
+        height: 7px;
+        background-color: #009adc91;
+    }
+
+    div#processos p{
+        font-size: 21px;
+        font-weight: 600;
+    }
+
+    div#linha div{
+        width: 500px;
+        height: 1px;
+        background-image: url(cog-wheels-2125183_1920.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    /* Seções */
+
+    section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 150px;
+    }
+
+    section div.risco{
+        width: 50%;
+        height: 2px;
+        background-color: #009BDC;
+    }
+
+    section h3{
+        color: #0A77BF;
+        font-size: 55px;
+    }
+
+    section p, section h4{
+        width: 85%;
+        font-size: 16px;
+        line-height: 1.8rem;
+        font-weight: 300;
+        text-align: justify;
+        color: #7a7a7a;
+    }
+
+    section h4{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    section.section2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 0;
+        padding: 30px 80px;
+    }
+
+    section.section2:nth-child(odd){
+        background-color: #eeeeee;
+    }
+
+    div.text, div.imagem{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        align-self: flex-start;
+        justify-content: center;
+    }
+
+    section.section2 h2{
+        font-size: 44px;
+        font-weight: 100;
+        color: #444444;
+    }
+
+    div.text p{
+        font-size: 17px;
+        color: #808080;
+        width: 100%;
+    }
+
+
+    div.risco-claro{
+        width: 100px;
+        height: 5px;
+        background-color: #009adc91;
+        align-self: flex-start;
+    }
+
+    section.section2 img{
+        width: 90%;
+        border-radius: 10px;
+        opacity: 0.8;
+    }
+
+    /* Slider */
+
+    section.slider{
+        padding-top: 30px;
+        gap: 30px;
+        flex-direction: row;
+    }
+
+    section.slider ion-icon{
+        font-size: 2em;
+        color: #009adc91;
+    }
+
+    section.slider ion-icon:hover{
+        cursor: pointer;
+    }
+
+    /* Apresentacao */
+
+    section#apresentacao{
+        width: 100vw;
+        height: 600px;
+        padding-top: 0;
+        background-image: url(group-of-people-in-conference-room.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: center center;
+        opacity: 0.8;
+    }
+
+    div#container-img{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        background-color: #0000007c;
+        width: 100%;
+    }
+
+    div#container-img img{
+        width: 200px;
+    }
+
+    div#container-img h2{
+        font-size: 44px;
+        color: #ffffff;
+    }
+
+    div#container-img p{
+        font-size: 21px;
+        color: #ffffff;
+        width: 100%;
+    }
+
+    div#container-img a{
+        font-size: 15px;
+        background-color: #ffffff;
+        color: #070707;
+        padding: 15px 30px;
+        letter-spacing: 3.5px;
+        transition: .3s;
+    }
+
+    div#container-img a:hover{
+        background-color: #03658F;
+        color: #ffffff;
+    }
+
+    /* Footer */
+
+    footer{
+        background-color: #54595f;
+        color: #ffffff;
+        padding: 20px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    footer img{
+        width: 120px;
+    }
+
+    footer div#paragrafo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    p#p{
+        font-size: 3em;
+        color: #00B1FC;
+    }
+
+    footer > div{
+        width: 20%;
+    
+    }
+
+    footer > div#first{
+        width: 45%;
+    }
+
+    div.container-footer{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-self: flex-start;
+    }
+
+    div#risco-footer{
+        width: 15%;
+        margin-top: 30px;
+        padding: 0;
+        height: 1px;
+        background-color: #6ec1e4;
+        align-self: flex-start;
+    }
+
+    footer h5{
+        font-size: 1.25rem;
+        font-weight: 600;
+        font-style: normal;
+        line-height: 2.1em;
+        letter-spacing: 1.1px;
+    }
+
+    div#container-links{
+        display: flex;
+        gap: 30px;
+    }
+
+    div#container-links a{
+        padding: 15px;
+        background-color: #ffffff;
+        color: #54595f;
+        transition: 0.3s;
+    }
+
+    div#container-links a:hover{
+        background-color: #02618f3b;
+        color: #6EC1E4;;
+    }
+
+    div#container-links a ion-icon{
+        font-size: 1.2em;
+    }
+}
+@media screen and (max-width: 767px){
+
 }
 
-body{
-    height: 100vh;
-    width: 100vw;
-    font-family: 'Roboto';
-    overflow: hidden;
-}
-
-/* Cabeçalho */
-
-header{
-    height: 100px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 100px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #009BDC;
-    box-shadow: 2px 2px 15px #00000060;
-    position: fixed;
-    z-index: 2;
-}
-
-header img{
-    width: 120px;
-}
-
-div#menu{
-    font-size: 2em;
-    color: #494c4f;
-    display: none;
-}
-
-div#menu:hover{
-    cursor: pointer;
-}
-
-ul{
-    display: flex;
-    gap: 30px;
-}
-
-li{
-    list-style: none;
-}
-
-header a#home{
-    color: #808080;
-}
-
-a{
-    text-decoration: none;
-    color: #009BDC;
-    font-weight: bold;
-}
-
-header a:hover{
-    color: #808080;
-}
-
-header a#home:hover{
-    color: #009BDC;
-}
-
-/* Conteúdo Principal */
-
-main{
-    padding-top: 100px;
-}
-
-div#container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 100px 50px;
-    background-color: #F5F6F8;
-}
-
-div#container div{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-div#processos{
-    flex-direction: column;
-    gap: 50px;
-    color: #54595f;
-}
-
-div#processos h2{
-    font-size: 55px;
-    font-weight: 100;
-}
-
-div#processos div{
-    width: 70px;
-    height: 7px;
-    background-color: #009adc91;
-}
-
-div#processos p{
-    font-size: 21px;
-    font-weight: 600;
-}
-
-div#linha div{
-    width: 500px;
-    height: 1px;
-    background-image: url(cog-wheels-2125183_1920.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-}
-
-/* Seções */
-
-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding-top: 150px;
-}
-
-section div.risco{
-    width: 50%;
-    height: 2px;
-    background-color: #009BDC;
-}
-
-section h3{
-    color: #0A77BF;
-    font-size: 55px;
-}
-
-section p, section h4{
-    width: 85%;
-    font-size: 16px;
-    line-height: 1.8rem;
-    font-weight: 300;
-    text-align: justify;
-    color: #7a7a7a;
-}
-
-section h4{
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-section.section2{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-top: 0;
-    padding: 30px 80px;
-}
-
-section.section2:nth-child(odd){
-    background-color: #eeeeee;
-}
-
-div.text, div.imagem{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
-    align-self: flex-start;
-    justify-content: center;
-}
-
-section.section2 h2{
-    font-size: 44px;
-    font-weight: 100;
-    color: #444444;
-}
-
-div.text p{
-    font-size: 17px;
-    color: #808080;
-    width: 100%;
-}
-
-
-div.risco-claro{
-    width: 100px;
-    height: 5px;
-    background-color: #009adc91;
-    align-self: flex-start;
-}
-
-section.section2 img{
-    width: 90%;
-    border-radius: 10px;
-    opacity: 0.8;
-}
-
-/* Slider */
-
-section.slider{
-    padding-top: 30px;
-    gap: 30px;
-    flex-direction: row;
-}
-
-section.slider ion-icon{
-    font-size: 2em;
-    color: #009adc91;
-}
-
-section.slider ion-icon:hover{
-    cursor: pointer;
-}
-
-/* Apresentacao */
-
-section#apresentacao{
-    width: 100vw;
-    height: 600px;
-    padding-top: 0;
-    background-image: url(group-of-people-in-conference-room.png);
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: center center;
-    opacity: 0.8;
-}
-
-div#container-img{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    background-color: #0000007c;
-    width: 100%;
-}
-
-div#container-img img{
-    width: 200px;
-}
-
-div#container-img h2{
-    font-size: 44px;
-    color: #ffffff;
-}
-
-div#container-img p{
-    font-size: 21px;
-    color: #ffffff;
-    width: 100%;
-}
-
-div#container-img a{
-    font-size: 15px;
-    background-color: #ffffff;
-    color: #070707;
-    padding: 15px 30px;
-    letter-spacing: 3.5px;
-    transition: .3s;
-}
-
-div#container-img a:hover{
-    background-color: #03658F;
-    color: #ffffff;
-}
-
-/* Footer */
-
-footer{
-    background-color: #54595f;
-    color: #ffffff;
-    padding: 20px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-footer img{
-    width: 120px;
-}
-
-footer div#paragrafo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-p#p{
-    font-size: 3em;
-    color: #00B1FC;
-}
-
-footer > div{
-    width: 20%;
-   
-}
-
-footer > div#first{
-    width: 45%;
-}
-
-div.container-footer{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    align-self: flex-start;
-}
-
-div#risco-footer{
-    width: 15%;
-    margin-top: 30px;
-    padding: 0;
-    height: 1px;
-    background-color: #6ec1e4;
-    align-self: flex-start;
-}
-
-footer h5{
-    font-size: 1.25rem;
-    font-weight: 600;
-    font-style: normal;
-    line-height: 2.1em;
-    letter-spacing: 1.1px;
-}
-
-div#container-links{
-    display: flex;
-    gap: 30px;
-}
-
-div#container-links a{
-    padding: 15px;
-    background-color: #ffffff;
-    color: #54595f;
-    transition: 0.3s;
-}
-
-div#container-links a:hover{
-    background-color: #02618f3b;
-    color: #6EC1E4;;
-}
-
-div#container-links a ion-icon{
-    font-size: 1.2em;
+@media screen and (max-width: 1024){
+    div#menu{
+        display: block;
+    }
+    nav{
+        display: none;
+    }
 }
