@@ -12,7 +12,7 @@ body{
     height: 100vh;
     width: 100vw;
     font-family: 'Roboto';
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 /* Cabeçalho */
